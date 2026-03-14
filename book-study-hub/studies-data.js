@@ -28,6 +28,14 @@ const siteData = {
     ]
   },
   studies: [
+
+    // =====================================================
+    // CURRENT STUDY
+    // Keep your active study here.
+    // When you start a new current study, paste it below.
+    // =====================================================
+    // >>> INSERT NEXT CURRENT STUDY BELOW THIS LINE <<<
+
     {
       slug: "pilgrims-progress",
       title: "The Pilgrim’s Progress",
@@ -129,6 +137,12 @@ const siteData = {
       ]
     },
 
+    // =====================================================
+    // UPCOMING STUDIES
+    // Add future studies here before they become current.
+    // =====================================================
+    // >>> INSERT NEXT UPCOMING STUDY BELOW THIS LINE <<<
+
     {
       slug: "the-great-divorce",
       title: "The Great Divorce",
@@ -209,6 +223,12 @@ const siteData = {
       ]
     },
 
+    // =====================================================
+    // ARCHIVED STUDIES
+    // Move completed studies here.
+    // =====================================================
+    // >>> INSERT NEXT ARCHIVED STUDY BELOW THIS LINE <<<
+
     {
       slug: "future-study-template",
       title: "Your Next Study",
@@ -255,5 +275,11 @@ const siteData = {
         }
       ]
     }
+
+    // =====================================================
+    // END OF STUDIES ARRAY
+    // Add all future study objects above this line.
+    // =====================================================
+
   ]
 };
