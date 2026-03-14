@@ -107,8 +107,9 @@ function renderHomePage() {
   qs('#currentStudyCard').innerHTML = createStudyCard(currentStudy, true);
 
   qs('#studyLibrary').innerHTML = siteData.studies
-    .map(study => createStudyCard(study, false))
-    .join('');
+  .filter(study => study.status !== 'current')
+  .map(study => createStudyCard(study, false))
+  .join('');
 
   qs('#sharedResources').innerHTML = siteData.home.sharedResources
     .map(createResourceItem)
