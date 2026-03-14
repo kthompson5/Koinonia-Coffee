@@ -45,7 +45,6 @@ function createMetaItem(label, value) {
 }
 
 function createResourceItem(resource) {
-
   let thumbnail = "";
 
   if (resource.link.includes("youtube.com") || resource.link.includes("youtu.be")) {
@@ -70,6 +69,7 @@ function createResourceItem(resource) {
 function createStudyCard(study, isCurrent = false) {
   return `
     <article class="study-card">
+      ${study.thumbnail ? `<img class="study-thumb" src="${study.thumbnail}" alt="${study.title} cover">` : ""}
       <div class="study-card-header">
         <span class="status-pill">${study.status}</span>
         <span class="length-pill">${study.durationLabel}</span>
@@ -169,6 +169,17 @@ function renderStudyPage() {
   qs('#studyAudience').textContent = study.audience;
   qs('#studyAim').textContent = study.aim;
 
+  const studyThumb = qs('#studyThumbnail');
+  if (studyThumb) {
+    if (study.thumbnail) {
+      studyThumb.src = study.thumbnail;
+      studyThumb.alt = `${study.title} cover`;
+      studyThumb.style.display = 'block';
+    } else {
+      studyThumb.style.display = 'none';
+    }
+  }
+
   qs('#studyMeta').innerHTML = [
     createMetaItem('Author', study.author),
     createMetaItem('Length', study.durationLabel),
@@ -179,7 +190,6 @@ function renderStudyPage() {
   qs('#themeList').innerHTML = study.themes.map(theme => `<li>${theme}</li>`).join('');
   qs('#weeksList').innerHTML = study.weeks.map(createWeekCard).join('');
 
-  // Remove the redundant standalone discussion tools/questions section
   const discussionQuestionsEl = qs('#discussionQuestions');
   if (discussionQuestionsEl) {
     const discussionSection =
@@ -209,6 +219,10 @@ renderSharedShell();
 
 if (document.body.dataset.page === 'home') {
   renderHomePage();
+}
+
+if (document.body.dataset.page === 'study') {
+  renderStudyPage();
 }
 
 if (document.body.dataset.page === 'study') {
