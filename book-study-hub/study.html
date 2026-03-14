@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study | The Forge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="study">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-kicker" id="brandKicker"></span>
+        <span class="brand-title" id="siteTitle"></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html">Home</a>
+        <a href="#week-plan">Weekly Plan</a>
+        <a href="#resources">Resources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero-study">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" id="studyStatus"></p>
+          <h1 id="studyTitle"></h1>
+          <p class="hero-copy" id="studySummary"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#week-plan">See Weekly Plan</a>
+            <a class="button button-secondary" href="index.html">Back to Home</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-label">Study Details</p>
+          <ul class="meta-list" id="studyMeta"></ul>
+          <div class="panel-block">
+            <p class="panel-heading">Who this page helps</p>
+            <p id="studyAudience"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="container two-col">
+        <article class="content-card">
+          <p class="eyebrow">Overview</p>
+          <h2>What this study is aiming at</h2>
+          <p id="studyAim"></p>
+        </article>
+        <article class="content-card">
+          <p class="eyebrow">Big themes</p>
+          <h2>What to watch for</h2>
+          <ul class="tag-list" id="themeList"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="week-plan">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Weekly plan</p>
+          <h2>Readings and weekly focus</h2>
+        </div>
+        <div class="stack-list" id="weeksList"></div>
+      </div>
+    </section>
+
+    <section class="section" id="discussion">
+      <div class="container two-col">
+        <article class="content-card">
+          <p class="eyebrow">Discussion tools</p>
+          <h2>Questions for the room</h2>
+          <div id="discussionQuestions"></div>
+        </article>
+        <article class="content-card">
+          <p class="eyebrow">Reference guide</p>
+          <h2>Quick helps</h2>
+          <div id="referenceGuides"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="resources">
+      <div class="container two-col">
+        <article class="content-card">
+          <p class="eyebrow">Resources</p>
+          <h2>Useful links for the group</h2>
+          <div class="resource-list" id="studyResources"></div>
+        </article>
+        <article class="content-card">
+          <p class="eyebrow">After the meeting</p>
+          <h2>Notes and carryover</h2>
+          <div id="meetingNotes"></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title" id="footerTitle"></p>
+        <p class="footer-copy" id="footerCopy"></p>
+      </div>
+      <a class="button button-secondary footer-button" href="index.html">Back to Home</a>
+    </div>
+  </footer>
+
+  <script src="studies-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

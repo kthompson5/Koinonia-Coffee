@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Koinonia & Coffee | Grace Harbor's Book Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-kicker" id="brandKicker"></span>
+        <span class="brand-title" id="siteTitle"></span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="siteNav">Menu</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="#current-study">Current Study</a>
+        <a href="#study-library">Library</a>
+        <a href="#how-it-works">How It Works</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow" id="heroEyebrow"></p>
+          <h1 id="heroTitle"></h1>
+          <p class="hero-copy" id="heroCopy"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" id="heroCurrentLink" href="#">Open Current Study</a>
+            <a class="button button-secondary" href="#study-library">Browse Library</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-label">This Week</p>
+          <h2 id="heroCurrentStudy"></h2>
+          <ul class="meta-list" id="heroMeta"></ul>
+          <div class="panel-block">
+            <p class="panel-heading">Current Focus</p>
+            <p id="heroFocus"></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="current-study">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Current study</p>
+          <h2>What the group is walking through now</h2>
+        </div>
+        <div id="currentStudyCard"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="study-library">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Study library</p>
+          <h2>Current and past studies in one place</h2>
+          <p>Each book study has its own page with the reading plan, discussion prompts, helpful resources, and notes from our discussions.</p>
+        </div>
+        <div class="card-grid" id="studyLibrary"></div>
+      </div>
+    </section>
+
+    <section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-heading narrow">
+      <p class="eyebrow">How our studies work</p>
+      <h2>Reading, discussion, and shared learning</h2>
+      <p>
+        Each book study at Grace Harbor includes a simple structure to help us
+        read together, think deeply, and have meaningful conversations.
+        Everything you need for the current study can be found on its page.
+      </p>
+    </div>
+
+    <div class="three-up">
+
+      <article class="info-card">
+        <h3>Weekly Reading Plan</h3>
+        <p>
+          Each study includes a clear weekly reading plan so everyone knows
+          what to read before the next gathering. Even if you miss a meeting,
+          you can easily follow along and stay connected to the discussion.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <h3>Discussion Prompts</h3>
+        <p>
+          Each week includes discussion prompts designed to help us think more
+          carefully about what we are reading and how it connects to our lives,
+          our faith, and our understanding of Scripture.
+        </p>
+      </article>
+
+      <article class="info-card">
+        <h3>Study Resources</h3>
+        <p>
+          Many studies also include helpful resources such as videos, articles,
+          podcasts, or downloadable guides that can deepen your understanding
+          of the book and the ideas it explores.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <p class="footer-title" id="footerTitle"></p>
+        <p class="footer-copy" id="footerCopy"></p>
+      </div>
+      <a class="button button-secondary footer-button" id="footerCurrentLink" href="#">Open Current Study</a>
+    </div>
+  </footer>
+
+  <script src="studies-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
