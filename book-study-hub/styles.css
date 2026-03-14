@@ -383,3 +383,17 @@ code {
   border-radius: 6px;
   margin-bottom: 10px;
 }
+
+.study-thumb {
+  width: 120px;
+  display: block;
+  margin: 0 auto 12px auto;
+  border-radius: 8px;
+}
+
+.study-page-thumb {
+  width: 160px;
+  display: block;
+  margin: 0 auto 16px auto;
+  border-radius: 8px;
+}
