@@ -135,35 +135,42 @@ function createWeekCard(week, index) {
 
   return `
     <article class="week-card collapsible-week ${isFirstOpen ? 'is-open' : ''}">
+
       <button class="week-toggle" type="button" aria-expanded="${isFirstOpen}" aria-controls="${contentId}">
         <div class="week-toggle-top">
           <span class="inline-pill">${week.label}</span>
           <span class="week-toggle-icon">${isFirstOpen ? '−' : '+'}</span>
         </div>
-        <div class="week-toggle-text">
-          <h3>${week.title}</h3>
-          <p>${week.focus}</p>
-        </div>
       </button>
 
       <div class="week-content" id="${contentId}" ${isFirstOpen ? '' : 'hidden'}>
+
+        <div class="sub-card">
+          <h3>${week.title}</h3>
+          <p>${week.focus}</p>
+        </div>
+
         <div class="week-grid">
           <div class="sub-card">
             <h4>Reading</h4>
             <p>${week.reading}</p>
           </div>
+
           <div class="sub-card">
             <h4>Main takeaway</h4>
             <p>${week.takeaway}</p>
           </div>
         </div>
+
         <div class="sub-card">
           <h4>Discussion prompts</h4>
           <ul class="question-list">
-            ${week.questions.map(question => `<li>${question}</li>`).join('')}
+            ${week.questions.map(q => `<li>${q}</li>`).join('')}
           </ul>
         </div>
+
       </div>
+
     </article>
   `;
 }
