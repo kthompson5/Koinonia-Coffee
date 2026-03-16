@@ -111,7 +111,7 @@ const siteData = {
           takeaway: "Salvation removes the burden of sin, but the Christian journey still requires faith, endurance, and trust in God through darkness and opposition."
         },
         {
-          label: "Week 3",
+          label: "Week 3 April 3rd, 2026",
           title: "TBD",
           reading: "TBD",
           focus: "TBD",
@@ -123,7 +123,7 @@ const siteData = {
           takeaway: "TBD"
         },
         {
-          label: "Week 4",
+          label: "Week 4 April 10, 2026",
           title: "TBD",
           reading: "TBD",
           focus: "TBD",
