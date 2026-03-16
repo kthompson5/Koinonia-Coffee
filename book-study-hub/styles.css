@@ -405,3 +405,39 @@ code {
   border-radius: 8px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
 }
+
+.week-toggle {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  padding: 0;
+  cursor: pointer;
+}
+
+.week-toggle-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.week-toggle-text h3 {
+  margin-bottom: 8px;
+}
+
+.week-toggle-text p {
+  margin: 0;
+}
+
+.week-toggle-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.week-content {
+  margin-top: 16px;
+}
