@@ -129,31 +129,40 @@ function createGuideHtml(guide) {
   `;
 }
 
-function createWeekCard(week) {
+function createWeekCard(week, index) {
+  const contentId = `week-content-${index}`;
+  const isFirstOpen = index === 0;
+
   return `
-    <article class="week-card">
-      <div class="study-card-header">
-        <span class="inline-pill">${week.label}</span>
-      </div>
-      <div>
-        <h3>${week.title}</h3>
-        <p>${week.focus}</p>
-      </div>
-      <div class="week-grid">
-        <div class="sub-card">
-          <h4>Reading</h4>
-          <p>${week.reading}</p>
+    <article class="week-card collapsible-week ${isFirstOpen ? 'is-open' : ''}">
+      <button class="week-toggle" type="button" aria-expanded="${isFirstOpen}" aria-controls="${contentId}">
+        <div class="week-toggle-top">
+          <span class="inline-pill">${week.label}</span>
+          <span class="week-toggle-icon">${isFirstOpen ? '−' : '+'}</span>
+        </div>
+        <div class="week-toggle-text">
+          <h3>${week.title}</h3>
+          <p>${week.focus}</p>
+        </div>
+      </button>
+
+      <div class="week-content" id="${contentId}" ${isFirstOpen ? '' : 'hidden'}>
+        <div class="week-grid">
+          <div class="sub-card">
+            <h4>Reading</h4>
+            <p>${week.reading}</p>
+          </div>
+          <div class="sub-card">
+            <h4>Main takeaway</h4>
+            <p>${week.takeaway}</p>
+          </div>
         </div>
         <div class="sub-card">
-          <h4>Main takeaway</h4>
-          <p>${week.takeaway}</p>
+          <h4>Discussion prompts</h4>
+          <ul class="question-list">
+            ${week.questions.map(question => `<li>${question}</li>`).join('')}
+          </ul>
         </div>
-      </div>
-      <div class="sub-card">
-        <h4>Discussion prompts</h4>
-        <ul class="question-list">
-          ${week.questions.map(question => `<li>${question}</li>`).join('')}
-        </ul>
       </div>
     </article>
   `;
@@ -189,8 +198,28 @@ function renderStudyPage() {
   ].join('');
 
   qs('#themeList').innerHTML = study.themes.map(theme => `<li>${theme}</li>`).join('');
-  qs('#weeksList').innerHTML = study.weeks.map(createWeekCard).join('');
+  qs('#weeksList').innerHTML = study.weeks.map((week, index) => createWeekCard(week, index)).join('');
 
+  qsa('.week-toggle').forEach(toggle => {
+  toggle.addEventListener('click', () => {
+    const weekCard = toggle.closest('.collapsible-week');
+    const content = qs('.week-content', weekCard);
+    const icon = qs('.week-toggle-icon', toggle);
+    const isOpen = toggle.getAttribute('aria-expanded') === 'true';
+
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    weekCard.classList.toggle('is-open', !isOpen);
+
+    if (isOpen) {
+      content.hidden = true;
+      if (icon) icon.textContent = '+';
+    } else {
+      content.hidden = false;
+      if (icon) icon.textContent = '−';
+    }
+  });
+});
+  
   const discussionQuestionsEl = qs('#discussionQuestions');
   if (discussionQuestionsEl) {
     const discussionSection =
