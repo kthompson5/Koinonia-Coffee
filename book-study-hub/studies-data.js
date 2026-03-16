@@ -84,7 +84,7 @@ const siteData = {
       ],
       weeks: [
         {
-          label: "Week 1 March 20th, 2026",
+          label: "Week 1 -- March 20th, 2026",
           title: "Apology -thru- The Interpreters House",
           reading: `The Author’s Apology<br>
                     Stage 1 - The City of Destruction<br>
@@ -98,7 +98,7 @@ const siteData = {
           takeaway: "The Christian journey begins when a person becomes aware of their sin, turns from the false comfort of the world, and humbly receives guidance that points them toward the narrow way."
         },
         {
-          label: "Week 2 March 27th, 2026",
+          label: "Week 2 -- March 27th, 2026",
           title: "The Place of Deliverance -thru- The Valley of the Shadow of Death",
           reading: `Stage 3 – The Place of Deliverance<br>
                     Stage 4 – The Valley of the Shadow of Death`,
@@ -111,7 +111,7 @@ const siteData = {
           takeaway: "Salvation removes the burden of sin, but the Christian journey still requires faith, endurance, and trust in God through darkness and opposition."
         },
         {
-          label: "Week 3 April 3rd, 2026",
+          label: "Week 3 -- April 3rd, 2026",
           title: "TBD",
           reading: "TBD",
           focus: "TBD",
@@ -123,7 +123,7 @@ const siteData = {
           takeaway: "TBD"
         },
         {
-          label: "Week 4 April 10, 2026",
+          label: "Week 4 -- April 10, 2026",
           title: "TBD",
           reading: "TBD",
           focus: "TBD",
