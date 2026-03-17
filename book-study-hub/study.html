@@ -27,59 +27,12 @@
 
   <main>
     <section class="hero hero-study">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow" id="studyStatus"></p>
-          <h1 id="studyTitle"></h1>
-          <p class="hero-copy" id="studySummary"></p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#week-plan">See Weekly Plan</a>
-            <a class="button button-secondary" href="index.html">Back to Home</a>
-          </div>
-        </div>
-        <aside class="hero-panel">
+      <div class="container narrow">
+        <p class="eyebrow" id="studyStatus"></p>
+        <h1 id="studyTitle"></h1>
+        <p class="hero-copy" id="studySummary"></p>
 
-  <img id="studyThumbnail" class="study-page-thumb" src="" alt="" style="display:none;">
-
-  <p class="panel-label">Study Details</p>
-  <ul class="meta-list" id="studyMeta"></ul>
-
-  <div class="panel-block">
-    <p class="panel-heading">Who this page helps</p>
-    <p id="studyAudience"></p>
-  </div>
-
-</aside>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="resources">
-      <div class="container two-col">
-        <article class="content-card">
-          <p class="eyebrow">Resources</p>
-          <h2>Useful links for the group</h2>
-          <div class="resource-list" id="studyResources"></div>
-        </article>
-        <article class="content-card">
-          <p class="eyebrow">After the meeting</p>
-          <h2>Notes and carryover</h2>
-          <div id="meetingNotes"></div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="overview">
-      <div class="container two-col">
-        <article class="content-card">
-          <p class="eyebrow">Overview</p>
-          <h2>What this study is aiming at</h2>
-          <p id="studyAim"></p>
-        </article>
-        <article class="content-card">
-          <p class="eyebrow">Big themes</p>
-          <h2>What to watch for</h2>
-          <ul class="tag-list" id="themeList"></ul>
-        </article>
+        <img id="studyThumbnail" class="study-page-thumb" src="" alt="" style="display:none;">
       </div>
     </section>
 
@@ -92,7 +45,28 @@
         <div class="stack-list" id="weeksList"></div>
       </div>
     </section>
-    <section class="section" id="discussion">
+
+    <section class="section" id="resources">
+      <div class="container">
+        <article class="content-card">
+          <p class="eyebrow">Resources</p>
+          <h2>Useful links for the group</h2>
+          <div class="resource-list" id="studyResources"></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="themes">
+      <div class="container">
+        <article class="content-card">
+          <p class="eyebrow">Big themes</p>
+          <h2>What to watch for</h2>
+          <ul class="tag-list" id="themeList"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="discussion" style="display:none;">
       <div class="container two-col">
         <article class="content-card">
           <p class="eyebrow">Discussion tools</p>
@@ -105,6 +79,36 @@
           <div id="referenceGuides"></div>
         </article>
       </div>
+    </section>
+
+    <section class="section" id="overview" style="display:none;">
+      <div class="container two-col">
+        <article class="content-card">
+          <p class="eyebrow">Overview</p>
+          <h2>What this study is aiming at</h2>
+          <p id="studyAim"></p>
+        </article>
+        <article class="content-card">
+          <p class="eyebrow">Big themes</p>
+          <h2>What to watch for</h2>
+          <ul class="tag-list" id="themeListHidden"></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="notes" style="display:none;">
+      <div class="container">
+        <article class="content-card">
+          <p class="eyebrow">After the meeting</p>
+          <h2>Notes and carryover</h2>
+          <div id="meetingNotes"></div>
+        </article>
+      </div>
+    </section>
+
+    <section style="display:none;">
+      <ul class="meta-list" id="studyMeta"></ul>
+      <p id="studyAudience"></p>
     </section>
   </main>
 
