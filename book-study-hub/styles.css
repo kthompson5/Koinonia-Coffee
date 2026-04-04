@@ -441,3 +441,12 @@ code {
 .week-content {
   margin-top: 16px;
 }
+
+.handout-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.handout-link .button {
+  display: inline-block;
+}
