@@ -167,6 +167,14 @@ function createWeekCard(week, index) {
           <ul class="question-list">
             ${week.questions.map(q => `<li>${q}</li>`).join('')}
           </ul>
+
+          ${week.handout ? `
+            <div class="handout-link">
+              <a class="button button-secondary" href="${week.handout.link}" target="_blank" rel="noopener noreferrer">
+                ${week.handout.text}
+              </a>
+            </div>
+          ` : ''}
         </div>
 
       </div>
