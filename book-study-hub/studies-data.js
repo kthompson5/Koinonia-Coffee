@@ -1,4 +1,4 @@
-const siteData = {
+  const siteData = {
   siteName: "Koinonia & Coffee",
   brandKicker: "Grace Harbor's Book Study",
   footerCopy: "A simple home base for Christian book studies, discussion nights, and archived notes.",
@@ -124,15 +124,23 @@ const siteData = {
         },
         {
           label: "Week 4 -- April 10, 2026",
-          title: "TBD",
-          reading: "TBD",
-          focus: "TBD",
+          title: "Convenient Faith vs. Costly Discipleship",
+          reading: `Stage 7 – Doubting Castle<br>
+            Stage 8 – The Delectable Mountains`,
+          focus: "True faith follows Christ through both suffering and success, while false faith only walks with Him when it is safe, beneficial, and admired.",
           questions: [
-            "TBD",
-            "TBD",
-            "TBD"
+            "Where are we most tempted to follow God only when it’s convenient, like By-Ends?",
+            "Why is By-Ends more dangerous than someone who openly rejects Christianity?",
+            "What does it actually look like today to follow Christ in “rags and chains,” not just when it’s comfortable?",
+            "If someone observed our life closely, would they see a steady, committed faith—or one that shifts based on circumstances?"
           ],
-          takeaway: "TBD"
+
+          handout: {
+          text: "📄 Print Week 4 Handout",
+          link: "/downloads/stage_7_8_pilg_prog.pdf"
+        },
+
+          takeaway: "A faith that only stands when it’s easy is not true faith; real discipleship remains loyal to Christ even when it is costly, uncomfortable, or unseen."
         }
       ]
     },
