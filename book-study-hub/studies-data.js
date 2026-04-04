@@ -132,7 +132,7 @@
             "Where are we most tempted to follow God only when it’s convenient, like By-Ends?",
             "Why is By-Ends more dangerous than someone who openly rejects Christianity?",
             "What does it actually look like today to follow Christ in “rags and chains,” not just when it’s comfortable?",
-            "If someone observed our life closely, would they see a steady, committed faith—or one that shifts based on circumstances?"
+            "If someone observed our life closely, would they see a steady, committed faith; or one that shifts based on circumstances?"
           ],
 
           handout: {
