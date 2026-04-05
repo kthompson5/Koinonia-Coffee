@@ -1,4 +1,4 @@
-THE FORGE - QUICK START
+Koninia & Coffee - QUICK START
 
 WHAT THIS IS
 This is a simple, mobile-first book study hub for your church group.
